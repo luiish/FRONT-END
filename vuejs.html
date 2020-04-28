@@ -115,10 +115,10 @@ var app = new Vue({
         this.newEntry.amount=0;
         
     },
-    changeToPaid(item){
+    changeToPaid:function(item){
         item.paid = !(item.paid);
     },
-        totalAmount(t){
+        totalAmount:function(t){
             var total = this.items.reduce(function(a, b){
                switch(t) {
                    case 0:  return a + (!b.paid ? b.amount : 0);
