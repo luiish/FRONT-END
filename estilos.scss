@@ -1,0 +1,28 @@
+@import "./header";
+@import "./variables";
+@import url('https://fonts.googleapis.com/css?family=Jost|Montserrat|Montserrat+Alternates&display=swap');
+
+
+
+
+
+body{
+
+	p,h1,h3{
+		color: $color1;
+
+	}
+	button{
+background: $color1;
+		&:hover{
+			background: $color2;
+		}
+	}
+	h1,h3{
+		font-family: $fuente1;
+
+	}
+	p{
+		font-family: $fuente2;
+	}
+}
