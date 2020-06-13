@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>JQuery Calculadora </h1>
+        <input type="text" class="form-control" id="texto1" />
+         <button id="btn1" class="btn btn-primary">Aceptar</button>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+    <button class="btn btn-outline-primary btn-sm btn-block" id="btn-7">7</button>
+    </div>
+
+    <div class="col-md-3">
+    <button class="btn btn-outline-primary btn-sm btn-block" id="btn-8">8</button>
+    </div>
+
+    <div class="col-md-3">
+    <button class="btn btn-outline-primary btn-sm btn-block" id="btn-9">9</button>
+    </div>
+
+    <div class="col-md-3">
+    <button class="btn btn-outline-primary btn-sm btn-block" id="btn-mult">x</button>
+    </div>
+
+    <div class="col-md-3">
+      <button class="btn btn-outline-primary btn-sm btn-block" id="btn-4">4</button>
+      </div>
+
+   <div class="col-md-3">
+        <button class="btn btn-outline-primary btn-sm btn-block" id="btn-5">5</button>
+        </div>
+    
+    <div class="col-md-3">
+          <button class="btn btn-outline-primary btn-sm btn-block" id="btn-6">6</button>
+          </div>
+          
+      <div class="col-md-3">
+            <button class="btn btn-outline-primary btn-sm btn-block" id="btn-rest">-</button>
+            </div>
+           
+       <div class="col-md-3">
+          <button class="btn btn-outline-primary btn-sm btn-block" id="btn-1">1</button>
+              </div>
+
+        <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-sm btn-block" id="btn-2">2</button>
+                </div>
+
+        <div class="col-md-3">
+             <button class="btn btn-outline-primary btn-sm btn-block" id="btn-3">3</button>
+                  </div>
+        <div class="col-md-3">
+             <button class="btn btn-outline-primary btn-sm btn-block" id="btn-mas">+</button>
+             </div>
+        <div class="col-md-3">
+              <button class="btn btn-outline-primary btn-sm btn-block" id="btn-0">0</button>
+              </div>      
+         <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-sm btn-block" id="btn-punto">.</button>
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-outline-primary btn-sm btn-block" id="btn-clear">C</button>
+                  </div>    
+
+        <div class="col-md-3">
+                    <button class="btn btn-outline-primary btn-sm btn-block" id="btn-igual">=</button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                      <button class="btn btn-outline-primary btn-sm btn-block" id="btn-div">/</button>
+                      </div>             
+  
+
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
+
+<script>
+jQuery(document).ready(function(){
+  var numero = 0;
+  var operacion= 0;
+});
+  jQuery(document).ready(function(){
+    $("#btn-clear").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val("");
+    });
+
+    $("#btn-1").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "1");
+
+    });
+    $("#btn-2").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "2");
+
+
+    });
+    $("#btn-3").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "3");
+
+    });
+    $("#btn-4").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "4");
+    });
+    $("#btn-5").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "5");
+
+
+    });
+    $("#btn-6").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "6");
+
+
+    });
+    $("#btn-7").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "7");
+
+    });
+    $("#btn-8").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "8");
+
+    });
+    $("#btn-9").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "9");
+    });
+    $("#btn-9").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "9");
+    });
+
+    $("#btn-0").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + "0");
+
+
+    });
+    $("#btn-punto").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      $("#texto1").val(valor + ".");
+
+    });
+
+    $("#btn-mas").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      numero= parseFloat(valor);
+      operacion=1;
+      $("#texto1").val("");
+  });
+  $("#btn-rest").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      numero= parseFloat(valor);
+      operacion=2;
+      $("#texto1").val("");
+
+  });
+
+
+  $("#btn-mult").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      numero= parseFloat(valor);
+      operacion=3;
+      $("#texto1").val("");
+  });
+
+  $("#btn-div").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      numero= parseFloat(valor);
+      operacion=4;
+      $("#texto1").val("");
+  });
+
+
+  $("#btn-igual").click(function(event){
+      event.preventDefault();
+      let valor = $("#texto1").val();
+      let res=0;
+      switch(operacion){
+        case 1:
+        res = numero + parseFloat(valor);
+         $("#texto1").val(res);
+         break;
+    
+        case 2:
+         res = numero - parseFloat(valor);
+         $("#texto1").val(res);
+         break;
+         case 3:
+         res = numero * parseFloat(valor);
+         $("#texto1").val(res);
+         break;
+
+         case 4:
+         res = numero / parseFloat(valor);
+         $("#texto1").val(res);
+         break;
+      }
+
+     
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
+
+</script>
+
+</body>
+</html>

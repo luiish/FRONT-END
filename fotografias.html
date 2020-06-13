@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Perritos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <h1>Perrito aleatorio</h1>
+                       
+            <button id="buscar" class="btn btn-success">Visualizar perrito</button>            
+        </div>    
+        </div>
+    <div class="row">
+        <div class="col-md-12" id="resultado"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        jQuery(document).ready(function() {
+            var api_key="25ae8218"                
+                $("#buscar").click(function(){
+                    $.get("https://dog.ceo/api/breeds/image/random",{
+                       
+                        },
+                        function(data, status) {
+                            //console.log(data);
+                            var message = "";
+                            var resultado = "";                           
+                            message = data.message;                             
+                            resultado = "<div class=\"card\" style=\"width: 18rem;\"><img src=\""+ message +"\" class=\"card-img-top\" alt=\"...\"><div class=\"card-body\"><h5 class=\"card-title\">";
+                           
+                            $("#resultado").append(resultado);
+                        
+                            });
+            });
+        });
+    </script>
+</body>
+</html>
